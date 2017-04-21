@@ -479,8 +479,3 @@ type(total_births)
 ```
 
 
-
-
-    pandas.core.frame.DataFrame
-
-
