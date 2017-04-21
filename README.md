@@ -22,9 +22,8 @@ As Grace Gipper said:
 	* Item 3a
 	* Item 3b
 
-\• ![This is a Wallpaper](MarkDown/Walpaper.jpg)
-
-\• [This is my Linkedin](https://www.linkedin.com/in/utcrystalw/)
+• ![This is a Wallpaper](MarkDown/Walpaper.jpg)
+• [This is my Linkedin](https://www.linkedin.com/in/utcrystalw/)
 
 \*literal asterisks\*
 
