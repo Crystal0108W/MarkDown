@@ -9,7 +9,7 @@
 
 As Grace Gipper said: 
 > I've always been more intrested
-< inthe future than the past 
+> in the future than the past 
 
 * Item1
 * Itme2
@@ -22,10 +22,9 @@ As Grace Gipper said:
 	* Item 3a
 	* Item 3b
 
-\* ![This is a Wallpaper](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiYp6ukp7bTAhUGxlQKHdinD7UQjRwIBw&url=http%3A%2F%2Fwww.uniwallpaper.com%2F&psig=AFQjCNGx9Zk5BDlXfmDnjrozGyRyqFdcOg&ust=1492890136685910)
+\• ![This is a Wallpaper](MarkDown/Walpaper.jpg)
 
-
-\* [This is my Linkedin](https://www.linkedin.com/in/utcrystalw/)
+\• [This is my Linkedin](https://www.linkedin.com/in/utcrystalw/)
 
 \*literal asterisks\*
 
