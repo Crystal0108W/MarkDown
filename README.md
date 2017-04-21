@@ -30,7 +30,7 @@ As Grace Gipper said:
 \*literal asterisks\*
 
 Emojie
-:+1 :sparkles :camel :tada :rocket :metal :octocat
+:+1: :sparkles: :camel: :tada: :rocket: :metal: :octocat:
 ```javascript 
 function test() {
   console.log("look ma', no spaces");
