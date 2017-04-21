@@ -2,8 +2,8 @@
 
 ## This is a second head 
 
-* This text will be italic*
-** This text will be bold ** 
+*This text will be italic*
+**This text will be bold** 
 
 * You **can** combine them *
 
