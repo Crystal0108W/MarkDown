@@ -3,9 +3,10 @@
 ## This is a second head 
 
 *This text will be italic*
+
 **This text will be bold** 
 
-* You **can** combine them *
+*You **can** combine them*
 
 As Grace Gipper said: 
 > I've always been more intrested
