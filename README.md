@@ -22,7 +22,7 @@ As Grace Gipper said:
 	* Item 3a
 	* Item 3b
 
-• ![This is a Wallpaper](/Walpaper.jpg)
+![This is a Wallpaper](/Walpaper.jpg)
 
 • [This is my Linkedin](https://www.linkedin.com/in/utcrystalw/)
 
