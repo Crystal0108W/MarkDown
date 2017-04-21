@@ -1,0 +1,486 @@
+
+
+```python
+import pandas as pd
+
+# Assemble all of the data into one file
+years = range(1880, 2011)
+pieces = []
+columns = ['name', 'sex', 'births']
+for year in years:
+    path = 'BabyNames Data/yob%d.txt' % year
+    frame = pd.read_csv(path, names = columns)
+    
+    frame['year'] = year
+    pieces.append(frame)
+    names = pd.concat(pieces, ignore_index = True)
+    # the concat glues the DataFrame objects together row-wise by default
+
+names
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>sex</th>
+      <th>births</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mary</td>
+      <td>F</td>
+      <td>7065</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Anna</td>
+      <td>F</td>
+      <td>2604</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Emma</td>
+      <td>F</td>
+      <td>2003</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Elizabeth</td>
+      <td>F</td>
+      <td>1939</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Minnie</td>
+      <td>F</td>
+      <td>1746</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Margaret</td>
+      <td>F</td>
+      <td>1578</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Ida</td>
+      <td>F</td>
+      <td>1472</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Alice</td>
+      <td>F</td>
+      <td>1414</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Bertha</td>
+      <td>F</td>
+      <td>1320</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Sarah</td>
+      <td>F</td>
+      <td>1288</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Annie</td>
+      <td>F</td>
+      <td>1258</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Clara</td>
+      <td>F</td>
+      <td>1226</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Ella</td>
+      <td>F</td>
+      <td>1156</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Florence</td>
+      <td>F</td>
+      <td>1063</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Cora</td>
+      <td>F</td>
+      <td>1045</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Martha</td>
+      <td>F</td>
+      <td>1040</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Laura</td>
+      <td>F</td>
+      <td>1012</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Nellie</td>
+      <td>F</td>
+      <td>995</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Grace</td>
+      <td>F</td>
+      <td>982</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Carrie</td>
+      <td>F</td>
+      <td>949</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Maude</td>
+      <td>F</td>
+      <td>858</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Mabel</td>
+      <td>F</td>
+      <td>808</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Bessie</td>
+      <td>F</td>
+      <td>796</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Jennie</td>
+      <td>F</td>
+      <td>793</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Gertrude</td>
+      <td>F</td>
+      <td>787</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Julia</td>
+      <td>F</td>
+      <td>783</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Hattie</td>
+      <td>F</td>
+      <td>769</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Edith</td>
+      <td>F</td>
+      <td>768</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Mattie</td>
+      <td>F</td>
+      <td>704</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Rose</td>
+      <td>F</td>
+      <td>700</td>
+      <td>1880</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1691725</th>
+      <td>Zayyan</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691726</th>
+      <td>Zeal</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691727</th>
+      <td>Zealan</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691728</th>
+      <td>Zecharia</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691729</th>
+      <td>Zeferino</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691730</th>
+      <td>Zekariah</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691731</th>
+      <td>Zeki</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691732</th>
+      <td>Zeriah</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691733</th>
+      <td>Zeshan</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691734</th>
+      <td>Zhyier</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691735</th>
+      <td>Zierre</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691736</th>
+      <td>Zildjian</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691737</th>
+      <td>Zimere</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691738</th>
+      <td>Zinn</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691739</th>
+      <td>Zishan</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691740</th>
+      <td>Ziven</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691741</th>
+      <td>Zmari</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691742</th>
+      <td>Zoran</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691743</th>
+      <td>Zoren</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691744</th>
+      <td>Zuhaib</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691745</th>
+      <td>Zyeire</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691746</th>
+      <td>Zygmunt</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691747</th>
+      <td>Zykerion</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691748</th>
+      <td>Zylar</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691749</th>
+      <td>Zylin</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691750</th>
+      <td>Zymaire</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691751</th>
+      <td>Zyonne</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691752</th>
+      <td>Zyquarius</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691753</th>
+      <td>Zyran</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1691754</th>
+      <td>Zzyzx</td>
+      <td>M</td>
+      <td>5</td>
+      <td>2010</td>
+    </tr>
+  </tbody>
+</table>
+<p>1691755 rows × 4 columns</p>
+</div>
+
+
+
+
+```python
+# Aggregate data at year and sex level using pivot_table
+total_births = names.pivot_table(values = 'births', index = 'year', columns = 'sex', aggfunc = sum)
+total_births[:5] 
+# Aggregate data at year and sex level using gorupby
+total_birth2 = names.groupby(by = ['sex', 'year']).births.sum()
+type(total_births)
+```
+
+
+
+
+    pandas.core.frame.DataFrame
+
+
