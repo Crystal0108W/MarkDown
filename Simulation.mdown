@@ -1,7 +1,7 @@
 # Data Simulation
 
 First of all, load packages that will be used for initial data inspection and visualization. 
-'''R
+'''{r}
 library(gridExtra)
 library(ggplot2)
 library(car)
