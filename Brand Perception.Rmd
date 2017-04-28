@@ -23,7 +23,7 @@ str(brand.ratings)
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE, fig.width=6, fig.height=2.5}
-plot(pressure)
+corrplot(cor(brand.sc[, 1:9]), order = "hclust")
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
