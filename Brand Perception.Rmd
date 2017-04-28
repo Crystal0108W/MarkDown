@@ -22,7 +22,7 @@ str(brand.ratings)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=FALSE, fig.width=6, fig.height=2.5}
 plot(pressure)
 ```
 
