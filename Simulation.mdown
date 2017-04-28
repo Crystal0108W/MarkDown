@@ -1,0 +1,14 @@
+# Data Simulation
+
+First of all, load packages that will be used for initial data inspection and visualization. 
+'''R
+library(gridExtra)
+library(ggplot2)
+library(car)
+library(gpairs)
+library(corrplot)
+library(gplots)
+library(psych)
+library(plotly)
+'''
+In this dataset, 2000 customer data records will be simulated and attributes(variables) include *age*, *credit in store*, whether the system has their *email address* or not, and the physical *distance* from customers to the store. 
